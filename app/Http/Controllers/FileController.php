@@ -23,6 +23,7 @@
 //                 'avatar'=> $filePath,
 //                 'password' => 'password'
 //             ]);
+
 //             return response()->json(['filePath' => $filePath]); 
 //         } 
 //         return 'Fayl yuklanmadi'; 
