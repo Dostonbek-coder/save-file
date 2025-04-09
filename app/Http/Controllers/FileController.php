@@ -10,12 +10,12 @@ class FileController extends Controller
 {
     public function uploadFile(Request $request) 
     { 
-        if ($request->hasFile('file')) { // tekshiruv file bormi yoqmi
-            // Fayl obyektini olish 
-            $file = $request->file('file'); // $request object ichida file metodi bor ichiga inputdagi name ni qabul qiladi 
-            // Fayl nomini o'zgartirish xar yuklangan file da unique name bo'lishini taminlaydi 
+        if ($request->hasFile('file')) { 
+
+            $file = $request->file('file');
+
             $fileName = time() . '.' . $file->getClientOriginalExtension(); 
-            // Faylni public diskka yuklash 
+
             $filePath = $file->storeAs('uploads', $fileName, 'public'); 
             $user = User::create([
                 'name'=>'Dostonbek',
